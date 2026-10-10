@@ -118,10 +118,10 @@ export default function ResultsCard({ results, goal }: ResultsCardProps) {
         >
           <h3 className="text-lg font-bold">This target is too low to recommend.</h3>
           <p className="mt-2 text-base leading-7 sm:text-lg">
-            This is too low to be sustainable for many people. Try 1,200–1,500
-            calories instead only with advice from a qualified health
-            professional; that range may not be right for everyone. Saving this
-            target is turned off.
+            Saving this target is turned off. Do not treat a calculator result
+            as an instruction to undereat. A qualified clinician or registered
+            dietitian can help you choose an appropriate approach. You can still
+            use the diary and learn about balanced meals without a target.
           </p>
         </div>
       ) : goal === "lose" ? (

@@ -244,6 +244,251 @@ button:active:not(:disabled) {
   animation: quiz-correct 350ms ease-out;
 }
 
+.font-display {
+  font-family: "Fraunces Variable", Georgia, serif;
+}
+.eyebrow {
+  color: #466b55;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.diary-card {
+  border: 1px solid #e4e1d7;
+  border-radius: 1.5rem;
+  background: #fffefa;
+  padding: 1.5rem;
+  box-shadow: 0 14px 38px -31px rgb(32 44 41 / 22%);
+}
+.diary-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+.diary-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  border: 1px solid #d2cfc3;
+  border-radius: 0.8rem;
+  padding: 0.7rem 0.85rem;
+  background: #fffefa;
+  color: #293731;
+  outline: none;
+}
+.diary-input:focus {
+  border-color: #587b62;
+  box-shadow: 0 0 0 3px #e1ebe0;
+}
+.diary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  background: #466b55;
+  color: #fffefa;
+  font-weight: 650;
+  font-size: 0.9rem;
+  transition:
+    background 180ms,
+    transform 180ms;
+}
+.diary-button:hover {
+  background: #365a43;
+}
+.diary-button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #587b62;
+  outline-offset: 4px;
+}
+.diary-overview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #365a43;
+  color: #fffefa;
+}
+.diary-overview > div:last-child {
+  flex-basis: 16rem;
+}
+.day-tile {
+  display: flex;
+  min-width: 0;
+  min-height: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e4e1d7;
+  border-radius: 0.8rem;
+  background: #f6f4ed;
+  color: #68736d;
+}
+.day-tile-active {
+  background: #466b55;
+  border-color: #466b55;
+  color: #fffefa;
+}
+.day-tile:not(.day-tile-active):hover {
+  background: #e1ebe0;
+}
+.learn-hero {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0 1.5rem;
+}
+.plate-note {
+  position: relative;
+  padding: 2rem;
+  border-radius: 48% 48% 2rem 2rem;
+  background: #e9ede0;
+}
+.portion-plate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 12px solid #fffefa;
+  outline: 1px solid #d2d9cb;
+  box-shadow: 0 15px 35px -20px rgb(32 44 41 / 20%);
+}
+.portion-plate > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.portion-plate small {
+  font-family: "DM Sans Variable", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+.plate-veg {
+  grid-row: span 2;
+  background: #a9c0a6;
+  color: #233a2b;
+  border-right: 3px solid #fffefa;
+}
+.plate-protein {
+  background: #edcbbd;
+  color: #63362d;
+  border-bottom: 3px solid #fffefa;
+}
+.plate-carb {
+  background: #e7d5ad;
+  color: #5f4930;
+}
+.nutrient-note {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.nutrient-amber {
+  background: #f1e7d1;
+  color: #5f4930;
+}
+.nutrient-rose {
+  background: #f6e4dc;
+  color: #63362d;
+}
+.nutrient-green {
+  background: #e1ebe0;
+  color: #2d4d38;
+}
+.meal-card {
+  overflow: hidden;
+  border: 1px solid #e4e1d7;
+  border-radius: 1.5rem;
+  background: #fffefa;
+}
+.meal-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 1.2rem 1.5rem;
+}
+.meal-strip-oat {
+  background: #f1e7d1;
+  color: #5f4930;
+}
+.meal-strip-lentil {
+  background: #f6e4dc;
+  color: #63362d;
+}
+.meal-strip-greens {
+  background: #e1ebe0;
+  color: #2d4d38;
+}
+.quiz-choice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d2cfc3;
+  border-radius: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  background: #fffefa;
+}
+.quiz-choice:hover:not(:disabled) {
+  border-color: #587b62;
+  background: #eef3ed;
+}
+.quiz-choice-correct {
+  border-color: #587b62;
+  background: #e1ebe0;
+}
+.quiz-choice-selected {
+  border-color: #947345;
+  background: #f8f3e8;
+}
+.quiz-letter {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #efede5;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .diary-card {
+    padding: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .learn-hero {
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 3rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

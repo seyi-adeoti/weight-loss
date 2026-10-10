@@ -27,6 +27,7 @@ export default function CaloriesExplained() {
   return (
     <main className="min-h-screen px-4 pb-20 pt-8 sm:px-6 sm:pt-14">
       <div className="mx-auto max-w-5xl">
+        <Link to="/nutrition-guide" className="mb-6 inline-flex min-h-11 items-center text-sm font-semibold text-emerald-800">← Food, portions &amp; beginner guide</Link>
         <header className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm">
             A friendly beginner’s guide
