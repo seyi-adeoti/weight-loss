@@ -91,7 +91,7 @@ export default function WeightChart({ entries }: WeightChartProps) {
 
   return (
     <div
-      aria-label="Weight during your seven most recent weigh-ins"
+      aria-label={`Weight in kilograms during your ${entries.length} most recent weigh-ins. Exact values are listed in the check-in history below.`}
       className="h-72 w-full sm:h-80"
       role="img"
     >

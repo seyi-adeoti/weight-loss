@@ -1,6 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function TrackerNavigation() {
+  const { pathname } = useLocation();
   const tabClass = ({ isActive }: { isActive: boolean }) =>
     `inline-flex min-h-12 flex-1 items-center justify-center rounded-full px-4 py-3 text-base font-bold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700 sm:text-lg ${
       isActive
@@ -13,7 +14,7 @@ export default function TrackerNavigation() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link
           className="inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-base font-semibold text-emerald-800 transition hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
-          to="/calories-explained"
+          to="/"
         >
           <span aria-hidden="true">←</span> Home
         </Link>
@@ -25,14 +26,23 @@ export default function TrackerNavigation() {
         </Link>
       </div>
       <nav
-        aria-label="Tracking pages"
-        className="mt-5 flex gap-2 rounded-full border border-slate-200 bg-white p-1.5 shadow-sm"
+        aria-label="Learn and track"
+        className="mt-5 flex flex-wrap gap-1 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm sm:rounded-full"
       >
         <NavLink className={tabClass} end to="/food-logger">
-          Today’s Foods
+          Food diary
         </NavLink>
         <NavLink className={tabClass} to="/weight-tracker">
-          Weight Progress
+          Weight
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            tabClass({ isActive: isActive || pathname === "/" })
+          }
+          aria-current={pathname === "/" ? "page" : undefined}
+          to="/nutrition-guide"
+        >
+          Learn &amp; portion
         </NavLink>
       </nav>
     </header>
